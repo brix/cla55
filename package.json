@@ -1,0 +1,29 @@
+{
+  "name": "cla55",
+  "version": "0.0.0",
+  "description": "Simply create or extend classes in JavaScript",
+  "license": "MIT",
+  "author": {
+    "name": "Evan Vosberg",
+    "email": "evanvosberg@inext.me"
+  },
+  "homepage": "https://github.com/brix/cla55",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/brix/cla55.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brix/cla55/issues"
+  },
+  "keywords": [
+    "oop",
+    "extend",
+    "class",
+    "classes",
+    "inherit",
+    "inheritence"
+  ],
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {}
+}
