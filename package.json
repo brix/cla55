@@ -30,8 +30,10 @@
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-copy": "^0.6.0",
     "grunt-contrib-jshint": "^0.10.0",
+    "grunt-git": "^0.2.14",
     "grunt-jscs": "^0.7.1",
     "grunt-jsonlint": "^1.0.4",
-    "load-grunt-config": "^0.13.2"
+    "load-grunt-config": "^0.13.2",
+    "runonymous-grunt": "0.0.1"
   }
 }
