@@ -6,9 +6,9 @@ module.exports = {
     all: {
         files: {
             src: [
-                '**/*.json',
-                '!build/**/*',
-                '!node_modules/**/*'
+                '<%= meta.cwdAll %>.json',
+                '!<%= meta.buildAll %>',
+                '!<%= meta.npmAll %>'
             ]
         }
     }

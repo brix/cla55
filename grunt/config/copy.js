@@ -6,20 +6,20 @@ module.exports = {
     build: {
         files: [{
             expand: true,
-            cwd: './source/',
+            cwd: '<%= meta.source %>',
             src: [
-                '**/*'
+                '<%= meta.cwdAll %>'
             ],
-            dest: './build/'
+            dest: '<%= meta.build %>'
         }, {
             expand: false,
-            cwd: './',
+            cwd: '<%= meta.cwd %>',
             src: [
                 'package.json',
                 'README.md',
                 'license.md'
             ],
-            dest: './build/'
+            dest: '<%= meta.build %>'
         }]
     }
 };

@@ -9,9 +9,9 @@ module.exports = {
         },
         files: {
             src: [
-                '**/*.js',
-                '!build/**/*',
-                '!node_modules/**/*'
+                '<%= meta.cwdAll %>.js',
+                '!<%= meta.buildAll %>',
+                '!<%= meta.npmAll %>'
             ]
         }
     }
