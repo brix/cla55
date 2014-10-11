@@ -1,6 +1,6 @@
 {
   "name": "cla55",
-  "version": "0.0.2",
+  "version": "0.0.0",
   "description": "Simply create or extend classes in JavaScript",
   "license": "MIT",
   "author": {
@@ -33,6 +33,7 @@
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-jscs": "^0.7.1",
     "grunt-jsonlint": "^1.0.4",
+    "grunt-update-json": "^0.2.0",
     "load-grunt-config": "^0.13.2"
   }
 }

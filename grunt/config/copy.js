@@ -15,7 +15,6 @@ module.exports = {
             expand: false,
             cwd: '<%= meta.cwd %>',
             src: [
-                'package.json',
                 'README.md',
                 'license.md'
             ],

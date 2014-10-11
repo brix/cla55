@@ -21,9 +21,6 @@ module.exports = function (grunt) {
                 build: 'build/',
                 buildAll: 'build/**/*',
 
-                temp: 'temp/',
-                tempAll: 'temp/**/*',
-
                 npm: 'node_modules/',
                 npmAll: 'node_modules/**/*'
             }
@@ -35,7 +32,9 @@ module.exports = function (grunt) {
 
     grunt.registerTask('build', 'Build a bundle', [
         'clean:build',
-        'copy:build'
+        'copy:build',
+        'update_json:npm',
+        'update_json:bower'
     ]);
 
     grunt.registerTask('default', 'Run code checker', [
