@@ -30,7 +30,8 @@ module.exports = function (grunt) {
         }
     });
 
-    grunt.loadTasks('./grunt/tasks'); // Will load the custom tasks
+    // Will load the custom tasks
+    // grunt.loadTasks('./grunt/tasks');
 
     grunt.registerTask('build', 'Build a bundle', [
         'clean:build',

@@ -4,8 +4,12 @@
 
 module.exports = {
     options: {
-        buildTask: 'build',
-        bumpFiles: ['package.json'],
-        dest: '<%= meta.build %>'
+        bump: {
+            files: ['package.json']
+        },
+        build: {
+            task: 'build',
+            dest: '<%= meta.build %>'
+        }
     }
 };
