@@ -19,7 +19,7 @@ module.exports = {
             'repository': null,
             'keywords': null,
             'main': null,
-            'dependencies': null,
+            'dependencies': null
         }
     },
     bower: {
@@ -35,7 +35,7 @@ module.exports = {
             'repository': null,
             'keywords': null,
             'main': null,
-            'dependencies': null,
+            'dependencies': null
         }
     }
 };
