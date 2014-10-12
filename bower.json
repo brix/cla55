@@ -3,10 +3,6 @@
   "version": "0.1.1",
   "description": "Simply create or extend classes in JavaScript",
   "license": "MIT",
-  "author": {
-    "name": "Evan Vosberg",
-    "email": "evanvosberg@inext.me"
-  },
   "homepage": "https://github.com/brix/cla55",
   "repository": {
     "type": "git",
