@@ -9,7 +9,7 @@ Compatible with CommonJS and AMD.
 
 ```js
 var Cla55 = require('cla55').Cla55,
-    cla55;
+    cla55 = require('cla55').cla55;
 
 Cla55.extend(protoProps, staticProps, _super);
 
