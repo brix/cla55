@@ -109,7 +109,13 @@
         assign(Child, staticProps);
 
         // Set a constructor on the new prototype
-        protoProps.constructor = protoProps.constructor || (protoProps.constructor = Parent.constructor || Parent);
+        if (protoProps.hasOwnProperty('constructor')) {
+            protoProps.constructor = protoProps.constructor;
+        } else if (Parent.prototype.hasOwnProperty('constructor')) {
+            protoProps.constructor = Parent.prototype.constructor;
+        } else {
+            protoProps.constructor = Parent;
+        }
 
         // Assign provided prototype properties to the new class
         if (_super === true) {
