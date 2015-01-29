@@ -103,7 +103,7 @@
         assign(Child, Parent);
 
         // Ensure new class has static extend method
-        assign(Child, Child.extend !== Cla55.extend ? {extend: Cla55.extend} : {});
+        assign(Child, !Child.extend ? {extend: Cla55.extend} : {});
 
         // Assign provided static properties to the new class
         assign(Child, staticProps);
