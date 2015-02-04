@@ -23,7 +23,7 @@
     "inherit",
     "inheritence"
   ],
-  "main": "index.js",
+  "main": "cla55.js",
   "dependencies": {},
   "devDependencies": {
     "grunt": "^0.4.5",
