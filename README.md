@@ -8,12 +8,11 @@
 Compatible with CommonJS and AMD.
 
 ```js
-var Cla55 = require('cla55').Cla55,
-    cla55 = require('cla55').cla55;
+var Cla55 = require('cla55');
 
 Cla55.extend(protoProps, staticProps, _super);
 
-cla55(parent, protoProps, staticProps, _super); 
+Cla55.create(Parent, protoProps, staticProps, _super);
 ```
 
 ## API
@@ -21,6 +20,8 @@ cla55(parent, protoProps, staticProps, _super);
 ### Cla55()
 
 #### Cla55.extend(protoProps, [staticProps], [_super])
+
+Shortcut to create a new class and inherit from ```Cla55```.
 
 ##### Arguments:
 
@@ -32,11 +33,13 @@ cla55(parent, protoProps, staticProps, _super);
 
 * *[Function]* Sub class inherited from ```Cla55```
 
-### cla55(Parent, protoProps, [staticProps], [_super])
+#### Cla55.create(Parent, protoProps, [staticProps], [_super])
+
+Class create helper to create a new class and inherit from ```Parent```.
 
 ##### Arguments:
 
-* ```Parent``` *Function* A function to inherit
+* ```Parent``` *[Function]* A function to inherit
 * ```protoProps``` *[Object]* A hash of prototype methods/properties to extend (including ```constructor``` method)
 * ```staticProps``` *[Object, optional]* A hash of static methods to extend
 * ```_super``` *[Boolean, optional]*  Hook methods with ```._super()``` and ```._superApply()``` methods
@@ -44,3 +47,11 @@ cla55(parent, protoProps, staticProps, _super);
 ##### Returns:
 
 * *[Function]* Sub class inherited from ```Parent```
+
+#### Cla55.Cla55
+
+Expose direct access to the base class `Cla55`.
+
+##### Returns:
+
+* *[Function]* Base class  ```Cla55```

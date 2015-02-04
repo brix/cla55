@@ -18,7 +18,7 @@
 
     'use strict';
 
-    var Cla55, cla55, assign, hook;
+    var Cla55, assign, hook;
 
     assign = function assign(target, source) {
         var key;
@@ -99,6 +99,9 @@
         Surrogate.prototype = Parent.prototype;
         Child.prototype = new Surrogate();
 
+        // Clear prototype reference
+        Surrogate.prototype = null;
+
         // Assign parent static properties to the new class
         assign(Child, Parent);
 
@@ -127,13 +130,14 @@
         return Child;
     };
 
-    cla55 = function cla55(Parent, protoProps, staticProps, _super) {
-        return Cla55.extend.call(Parent, protoProps, staticProps, _super);
-    };
-
-
     exports.Cla55 = Cla55;
 
-    exports.cla55 = cla55;
+    exports.extend = function (protoProps, staticProps, _super) {
+        return exports.Cla55.extend.call(exports.Cla55, protoProps, staticProps, _super);
+    };
+
+    exports.create = function cla55(Parent, protoProps, staticProps, _super) {
+        return exports.Cla55.extend.call(Parent, protoProps, staticProps, _super);
+    };
 
 }));
