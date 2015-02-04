@@ -18,7 +18,7 @@
 
     'use strict';
 
-    var Cla55, cla55, assign, hook;
+    var Cla55, assign, hook;
 
     assign = function assign(target, source) {
         var key;
@@ -99,17 +99,26 @@
         Surrogate.prototype = Parent.prototype;
         Child.prototype = new Surrogate();
 
+        // Clear prototype reference
+        Surrogate.prototype = null;
+
         // Assign parent static properties to the new class
         assign(Child, Parent);
 
         // Ensure new class has static extend method
-        assign(Child, Child.extend !== Cla55.extend ? {extend: Cla55.extend} : {});
+        assign(Child, !Child.extend ? {extend: Cla55.extend} : {});
 
         // Assign provided static properties to the new class
         assign(Child, staticProps);
 
         // Set a constructor on the new prototype
-        protoProps.constructor = protoProps.constructor || (protoProps.constructor = Parent.constructor || Parent);
+        if (protoProps.hasOwnProperty('constructor')) {
+            protoProps.constructor = protoProps.constructor;
+        } else if (Parent.prototype.hasOwnProperty('constructor')) {
+            protoProps.constructor = Parent.prototype.constructor;
+        } else {
+            protoProps.constructor = Parent;
+        }
 
         // Assign provided prototype properties to the new class
         if (_super === true) {
@@ -121,13 +130,14 @@
         return Child;
     };
 
-    cla55 = function cla55(Parent, protoProps, staticProps, _super) {
-        return Cla55.extend.call(Parent, protoProps, staticProps, _super);
-    };
-
-
     exports.Cla55 = Cla55;
 
-    exports.cla55 = cla55;
+    exports.extend = function (protoProps, staticProps, _super) {
+        return exports.Cla55.extend.call(exports.Cla55, protoProps, staticProps, _super);
+    };
+
+    exports.create = function cla55(Parent, protoProps, staticProps, _super) {
+        return exports.Cla55.extend.call(Parent, protoProps, staticProps, _super);
+    };
 
 }));
