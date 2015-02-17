@@ -89,7 +89,13 @@
 
         var Parent = this,
             Child = function Cla55() {
-                return this.constructor.apply(this, arguments);
+                if (this instanceof Child) {
+                    // Call the instance constructor
+                    return this.constructor.apply(this, arguments);
+                } else {
+                    // Static call of the constructor
+                    return Child.prototype.constructor.apply(Child, arguments);
+                }
             },
             Surrogate = function Cla55() {
                 return;
