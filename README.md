@@ -50,7 +50,7 @@ Class create helper to create a new class and inherit from ```Parent```.
 
 #### Cla55.Cla55
 
-Expose direct access to the base class `Cla55`.
+Direct expose of the base class `Cla55`.
 
 ##### Returns:
 
